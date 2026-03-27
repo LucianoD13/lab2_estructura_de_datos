@@ -1,0 +1,36 @@
+Fri Mar 27 05:48:19 PM UTC 2026: 
+ list.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:79:5: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+   79 |     Nodo* nuevo = createNodo(data);
+      |     ^~~~
+      |     Node
+list.c:79:19: error: implicit declaration of function ‘createNodo’; did you mean ‘createNode’? [-Wimplicit-function-declaration]
+   79 |     Nodo* nuevo = createNodo(data);
+      |                   ^~~~~~~~~~
+      |                   createNode
+list.c:79:19: error: initialization of ‘int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+list.c:80:5: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+   80 |     Nodo* aux = front(list);
+      |     ^~~~
+      |     Node
+list.c:80:17: error: implicit declaration of function ‘front’ [-Wimplicit-function-declaration]
+   80 |     Nodo* aux = front(list);
+      |                 ^~~~~
+list.c:80:17: error: initialization of ‘int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+list.c:82:18: error: request for member ‘next’ in something not a structure or union
+   82 |         aux = aux->next;
+      |                  ^~
+list.c:84:10: error: request for member ‘next’ in something not a structure or union
+   84 |     nuevo->next = aux->next;
+      |          ^~
+list.c:84:22: error: request for member ‘next’ in something not a structure or union
+   84 |     nuevo->next = aux->next;
+      |                      ^~
+list.c:85:8: error: request for member ‘next’ in something not a structure or union
+   85 |     aux->next = nuevo;
+      |        ^~
+01f9b78
