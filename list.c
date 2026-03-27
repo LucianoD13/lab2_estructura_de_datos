@@ -85,16 +85,16 @@ void pushCurrent(List * list, void * data) {
     }
 
     Node* aux = list->current;
-    nuevo->next = aux;
-    nuevo->prev = aux->prev;
-    if(aux->prev != NULL){
-        aux->prev->next = nuevo;
+
+    nuevo->prev = aux;
+    nuevo->next = aux->next;
+    if(aux->next != NULL){
+        aux->next->prev = nuevo;
     }
     else{
-        list->head = nuevo;
+        list->tail = nuevo;
     }
-    aux->prev = nuevo;
-    list->current = nuevo;
+    aux->next = nuevo;
 }
 
 void * popFront(List * list) {
