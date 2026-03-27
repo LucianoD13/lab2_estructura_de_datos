@@ -90,7 +90,9 @@ void pushCurrent(List * list, void * data) {
     if(aux->prev != NULL){
         aux->prev->next = nuevo;
     }
-    list->head = nuevo;
+    else{
+        list->head = nuevo;
+    }
     aux->prev = nuevo;
     list->current = nuevo;
 }
