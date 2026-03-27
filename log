@@ -34,3 +34,14 @@ list.c:85:8: error: request for member ‘next’ in something not a structure o
    85 |     aux->next = nuevo;
       |        ^~
 01f9b78
+Fri Mar 27 05:48:56 PM UTC 2026: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:80:17: error: implicit declaration of function ‘front’ [-Wimplicit-function-declaration]
+   80 |     Node* aux = front(list);
+      |                 ^~~~~
+list.c:80:17: error: initialization of ‘Node *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+3bfe0a6
