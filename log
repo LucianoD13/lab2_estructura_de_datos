@@ -230,3 +230,9 @@ list.c:103:5: error: ‘liste’ undeclared (first use in this function); did yo
       |     list
 list.c:103:5: note: each undeclared identifier is reported only once for each function it appears in
 bc524ef
+Sun Mar 29 02:22:21 AM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  11|1
+total_score: 50/60
+8bd41de
