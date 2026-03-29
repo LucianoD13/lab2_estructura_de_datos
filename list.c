@@ -153,12 +153,16 @@ void * popCurrent(List * list) {
         if(izq == NULL){
             list->head = der; 
         }
-        izq->next = der;
-
+        else{
+            izq->next = der;
+        }
+        
         if(der == NULL){
             list->tail = izq;
         }
-        der->prev = izq;
+        else{
+            der->prev = izq;
+        }
 
         list->current = der;
         free(borrar);
