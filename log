@@ -168,3 +168,18 @@ list.c:43:15: error: expected ‘;’ before ‘else’
    44 |     else{
       |     ~~~~       
 a21e0bc
+Sun Mar 29 12:04:05 AM UTC 2026: 
+ list.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from list.c:6,
+                 from test.c:5:
+list.c: In function ‘createList’:
+list.c:39:8: error: void value not ignored as it ought to be
+   39 |     if(assert(new != NULL)){
+      |        ^~~~~~
+list.c:49:1: error: control reaches end of non-void function [-Werror=return-type]
+   49 | }
+      | ^
+cc1: all warnings being treated as errors
+db63992
